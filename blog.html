@@ -1,313 +1,249 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="emerald" data-build="a1b2c3d4">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강서 셔츠룸 블로그 | 데이터 기반 업소 분석 2025</title>
-    <meta name="description" content="강서구 셔츠룸 모음 시장을 분석한 블로그 포스트. 2025년 강서 셔츠룸 추천 리스트의 선정 기준, 업소별 특성, FAQ를 데이터 기반으로 제공합니다. 예약 문의 010-6279-0862.">
-    <meta name="keywords" content="강서 셔츠룸 블로그, 강서 셔츠룸 모음 분석, 강서구 셔츠룸 추천, 셔츠룸 리스트 2025, 강서 셔츠룸 데이터">
-    <link rel="canonical" href="https://t3b06-gs-shirts-list.vercel.app/blog">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://t3b06-gs-shirts-list.vercel.app/blog">
-    <meta property="og:title" content="강서 셔츠룸 모음 시장 분석: 2025 데이터 기반 인사이트">
-    <meta property="og:description" content="강서구 셔츠룸의 선정 기준과 업소별 특성을 데이터로 분석한 블로그 포스트. 전문가 시각의 객관적 리뷰.">
-    <meta name="twitter:card" content="summary_large_image">
-    <style>
-        /* ===== 브루탈리스트 아방가르드 디자인 시스템 ===== */
-        :root {
-            --bpaas-bg: #1a1a1a;
-            --bpaas-text: #f0e6d2;
-            --bpaas-accent: #d4a853;
-            --bpaas-concrete: #4a4a4a;
-            --bpaas-highlight: #ffd966;
-            --bpaas-border: #6b5b3e;
-            --bpaas-font: 'Courier New', Courier, monospace;
-            --bpaas-header-bg: #111;
-            --bpaas-card-bg: #242424;
-            --bpaas-meta: #a0937d;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: var(--bpaas-bg);
-            color: var(--bpaas-text);
-            font-family: var(--bpaas-font);
-            line-height: 1.6;
-            padding: 20px;
-        }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        /* ===== 헤더 & 햄버거 ===== */
-        header {
-            background: var(--bpaas-header-bg);
-            padding: 20px 24px;
-            border-bottom: 3px solid var(--bpaas-accent);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo a {
-            color: var(--bpaas-accent);
-            text-decoration: none;
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        .hamburger-menu {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            padding: 5px;
-        }
-        .hamburger-menu span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: var(--bpaas-text);
-            transition: 0.3s;
-        }
-        nav {
-            width: 100%;
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 0.5s ease-out;
-        }
-        nav.open {
-            max-height: 300px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 15px 0 0;
-        }
-        nav ul li a {
-            color: var(--bpaas-text);
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 8px 12px;
-            border-left: 3px solid transparent;
-            transition: 0.2s;
-        }
-        nav ul li a:hover {
-            border-left-color: var(--bpaas-accent);
-            background: #2a2a2a;
-        }
-        /* ===== 메인 콘텐츠 ===== */
-        main {
-            padding: 40px 0;
-        }
-        .blog-post {
-            background: var(--bpaas-card-bg);
-            padding: 40px 35px;
-            border: 1px solid var(--bpaas-border);
-            box-shadow: 6px 6px 0 #0d0d0d;
-            margin-bottom: 50px;
-        }
-        .blog-post h1 {
-            font-size: 2.6rem;
-            color: var(--bpaas-highlight);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            line-height: 1.2;
-            margin-bottom: 10px;
-            border-bottom: 2px solid var(--bpaas-accent);
-            padding-bottom: 15px;
-        }
-        .blog-meta {
-            color: var(--bpaas-meta);
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .blog-meta span::before {
-            content: "▸ ";
-            color: var(--bpaas-accent);
-        }
-        .blog-post h2 {
-            font-size: 1.8rem;
-            color: var(--bpaas-accent);
-            margin: 35px 0 15px;
-            border-left: 5px solid var(--bpaas-highlight);
-            padding-left: 15px;
-        }
-        .blog-post h3 {
-            font-size: 1.4rem;
-            color: var(--bpaas-text);
-            margin: 25px 0 10px;
-            text-transform: uppercase;
-        }
-        .blog-post p {
-            margin-bottom: 20px;
-            font-size: 1rem;
-            color: #ddd;
-        }
-        .blog-post .stat {
-            background: #2e2e2e;
-            padding: 12px 18px;
-            border-left: 4px solid var(--bpaas-highlight);
-            margin: 20px 0;
-            font-weight: bold;
-        }
-        .blog-post .stat span {
-            color: var(--bpaas-highlight);
-        }
-        .blog-post ul {
-            margin: 15px 0 25px 25px;
-            list-style: square;
-        }
-        .blog-post ul li {
-            margin-bottom: 8px;
-            color: #ccc;
-        }
-        .blog-post .insight-box {
-            background: #1f1f1f;
-            padding: 20px;
-            border: 1px dashed var(--bpaas-accent);
-            margin: 30px 0;
-        }
-        .blog-post .insight-box p {
-            margin-bottom: 0;
-        }
-        /* ===== FAQ 섹션 ===== */
-        .faq-section {
-            background: var(--bpaas-card-bg);
-            padding: 35px 30px;
-            border: 1px solid var(--bpaas-border);
-            box-shadow: 4px 4px 0 #0d0d0d;
-        }
-        .faq-section h2 {
-            font-size: 2rem;
-            color: var(--bpaas-highlight);
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            border-bottom: 2px solid var(--bpaas-accent);
-            padding-bottom: 10px;
-        }
-        .faq-item {
-            margin-bottom: 25px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
-        }
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        .faq-question {
-            font-weight: bold;
-            color: var(--bpaas-accent);
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-        .faq-question::before {
-            content: "Q: ";
-            color: var(--bpaas-highlight);
-            font-weight: bold;
-            margin-right: 8px;
-        }
-        .faq-answer {
-            color: #ccc;
-            padding-left: 25px;
-        }
-        .faq-answer::before {
-            content: "A: ";
-            color: var(--bpaas-accent);
-            font-weight: bold;
-            margin-right: 5px;
-        }
-        /* ===== 푸터 ===== */
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            border-top: 2px solid var(--bpaas-concrete);
-            margin-top: 50px;
-            color: var(--bpaas-meta);
-            font-size: 0.85rem;
-        }
-        footer a {
-            color: var(--bpaas-accent);
-            text-decoration: none;
-        }
-        /* ===== 반응형 ===== */
-        @media (min-width: 768px) {
-            header {
-                flex-wrap: nowrap;
-            }
-            .hamburger-menu {
-                display: none;
-            }
-            nav {
-                max-height: none !important;
-                width: auto;
-            }
-            nav ul {
-                flex-direction: row;
-                gap: 25px;
-                padding: 0;
-            }
-            nav ul li a {
-                border-left: none;
-                border-bottom: 2px solid transparent;
-                padding: 5px 0;
-            }
-            nav ul li a:hover {
-                border-left: none;
-                border-bottom-color: var(--bpaas-accent);
-                background: transparent;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>강서 셔츠룸 모음 — 처음 방문자를 위한 조건별 선택 안내</title>
+<meta name="description" content="강서 지역 셔츠룸을 처음 찾는 분들을 위해 선택 기준, 이용 전 확인사항, 상황별 적합성을 상세히 안내합니다.">
+<meta name="keywords" content="강서, 셔츠룸, 강서 셔츠룸 모음, 셔츠룸 선택 기준, 셔츠룸 이용 전 확인">
+<link rel="canonical" href="https://gangseo-review-choice.hardcoreroom.com/blog.html">
+<meta property="og:title" content="강서 셔츠룸 모음 — 처음 방문자를 위한 조건별 선택 안내">
+<meta property="og:description" content="강서 지역 셔츠룸을 처음 찾는 분들을 위해 선택 기준, 이용 전 확인사항, 상황별 적합성을 상세히 안내합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gangseo-review-choice.hardcoreroom.com/blog.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="강서 셔츠룸 모음 — 처음 방문자를 위한 조건별 선택 안내">
+<meta name="twitter:description" content="강서 지역 셔츠룸을 처음 찾는 분들을 위해 선택 기준, 이용 전 확인사항, 상황별 적합성을 상세히 안내합니다.">
+<meta name="bpaas-design-system" content="editorial-apple">
+<meta name="bpaas-design-theme" content="kr-noir-burgundy">
+<meta name="generator" content="custom-cms-x7kz">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "강서 셔츠룸 모음",
+  "url": "https://gangseo-review-choice.hardcoreroom.com/",
+  "sameAs": [],
+  "author": {
+    "@type": "Person",
+    "name": "한빛 로컬 가이드"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "강서에 있는 셔츠룸을 예약하려면 어떤 절차가 필요한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "대부분의 셔츠룸은 온라인 예약 시스템을 운영합니다. 웹사이트에 접속해 원하는 날짜와 시간을 선택하고, 이름·연락처를 입력하면 바로 예약이 완료됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "초보자가 처음 방문할 때 꼭 확인해야 할 항목은 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이용 전 반드시 시설 이용 규칙·위생·환불 정책을 확인하고, 필요한 경우 개인 물품 보관 함을 미리 확인해 두는 것이 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "단체 예약 시 추가 비용이 발생할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 인원 수에 따라 최소 이용 시간·인원당 추가 요금이 적용될 수 있습니다. 사전에 셔츠룸 측과 상세 조건을 협의하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "예약 취소는 어떻게 처리하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "대부분의 경우 24시간 전까지는 무료 취소가 가능하며, 그 이후에는 전액 혹은 일부 금액이 차감되는 정책을 운영합니다."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+/* 기본 폰트 설정 */
+html {font-size: 100%;}
+body {
+  margin:0; font-family:"Noto Serif KR", serif; background:#120808; color:#fdf5f5;
+  line-height:1.6; background-image:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="%23120808"/><path d="M0 0h20v20H0z" fill="%23fdf5f5" fill-opacity="0.02"/></svg>');
+  background-attachment:fixed;
+}
+h1,h2,h3 {
+  font-family:"Cormorant Garamond", serif; font-weight:900; line-height:1.2;
+}
+h1 {font-size:2.8rem; margin-bottom:0.5em;}
+h2 {font-size:2rem; margin-top:1.5em; margin-bottom:0.5em;}
+h3 {font-size:1.6rem; margin-top:1.2em; margin-bottom:0.4em;}
+/* 헤더 */
+.x-main-06sz {
+  background:#120808; color:#fdf5f5; padding:24px 48px; border-bottom:3px double #fdf5f5;
+}
+.x-main-06sz a {color:#fdf5f5; text-decoration:none; margin-left:24px; font-variant:small-caps;}
+/* 내비게이션 – 햄버거 */
+#nav-toggle {display:none;}
+.m-side-4v0v label {
+  display:none; font-size:1.5rem; cursor:pointer; user-select:none;
+}
+@media (max-width:768px){
+  .m-side-4v0v label {display:block;}
+  .m-side-4v0v ul {display:none; flex-direction:column; background:#120808;}
+  #nav-toggle:checked + ul {display:flex;}
+}
+.m-side-4v0v ul {list-style:none; margin:0; padding:0; display:flex;}
+.m-side-4v0v li {margin-right:32px;}
+/* 히어로 */
+.r-txt-7k7p {
+  position:relative; min-height:60vh; display:flex; align-items:center; justify-content:center;
+  color:#fdf5f5; text-align:center; padding:48px;
+}
+.r-txt-7k7p::before {
+  content:""; position:absolute; inset:0;
+  background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.04) 10px, rgba(255,255,255,0.04) 20px);
+}
+.r-txt-7k7p h1 {font-size:3.2rem; position:relative; z-index:1;}
+/* 섹션 */
+.n-grid-7rri {
+  max-width:760px; margin:0 auto; padding:120px 48px; position:relative;
+}
+.n-grid-7rri[data-v]::after {
+  content:""; position:absolute; inset:0; border:3px double #fdf5f5; pointer-events:none;
+}
+.n-grid-7rri:nth-child(even){background:#1a0a0a;}
+/* 드롭 캡 */
+.n-grid-7rri p:first-of-type::first-letter {
+  float:left; font-size:4rem; line-height:1; margin-right:8px; font-family:"Playfair Display", serif;
+  color:#fdf5f5;
+}
+/* 라벨 */
+.k-hero-0kqy {
+  display:inline-block; font-variant:small-caps; color:#6b1a1a; margin-bottom:12px;
+}
+/* 카드 */
+.v-head-92v9 {
+  border:2px solid #fdf5f5; padding:24px; margin-top:48px;
+}
+.v-head-92v9 h3 {margin-top:0;}
+/* 버튼 */
+.x-head-ug8u {
+  display:inline-block; padding:12px 24px; background:#6b1a1a; color:#fdf5f5;
+  border:none; border-radius:9999px; cursor:pointer; text-decoration:none;
+  font-variant:small-caps;
+}
+/* 타임라인 */
+.q-body-qjkm {counter-reset:section;}
+.q-body-qjkm li {
+  position:relative; padding-left:48px; margin-bottom:24px;
+}
+.q-body-qjkm li::before {
+  counter-increment:section; content:counter(section, upper-roman)".";
+  position:absolute; left:0; top:0; font-weight:900; color:#6b1a1a;
+}
+
+/* 푸터 */
+.q-img-jivx {
+  background:#120808; color:#fdf5f5; text-align:center; padding:48px 0;
+  border-top:3px double #fdf5f5;
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="logo"><a href="/">강서셔츠룸</a></div>
-        <div class="hamburger-menu" id="hamburger" onclick="toggleNav()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav id="navMenu">
-            <ul>
-                <li><a href="/">홈</a></li>
-                <li><a href="/list">리스트</a></li>
-                <li><a href="/blog">블로그</a></li>
-                <li><a href="/about">소개</a></li>
-                <li><a href="tel:01062790862">예약문의</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="x-main-06sz">
+  <div class="m-side-4v0v">
+    <label for="nav-toggle">☰ 메뉴</label>
+    <input type="checkbox" id="nav-toggle">
+    <ul>
+      <li><a href="#intro">소개</a></li>
+      <li><a href="#criteria">선택 기준</a></li>
+      <li><a href="#tips">이용 팁</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+</header>
 
-    <main class="container">
-        <article class="blog-post">
-            <h1>강서 셔츠룸 모음 2025: 데이터로 분석한 선정 기준과 업소별 특성</h1>
-            <div class="blog-meta">
-                <span>2025-04-10</span>
-                <span>강서구 셔츠룸 분석팀</span>
-                <span>조회 2,340</span>
-                <span>데이터 기반 인사이트</span>
-            </div>
+<section class="r-txt-7k7p" aria-label="Hero 이미지">
+  <h1>강서 셔츠룸 모음</h1>
+</section>
 
-            <p>강서구 셔츠룸 시장은 2025년 들어 전년 대비 22%의 거래량 증가를 기록하며, 서울 서부 지역의 대표적인 유흥 업종으로 자리잡았다. 본 블로그 포스트는 강서 셔츠룸 모음 리스트를 객관적으로 평가하기 위해 수집된 1,200건의 실제 방문 후기, 68개 업소의 서비스 데이터, 그리고 위치 기반 접근성 지표를 종합 분석한 결과를 제공한다. 모든 정보는 예약 문의(010-6279-0862)를 통해 확인 가능한 업소만을 대상으로 하였으며, 광고성 정보는 배제되었다.</p>
+<main>
+  <section class="n-grid-7rri" data-v="a1b2c3" id="intro" aria-label="소개">
+    <div class="k-hero-0kqy">소개</div>
+    <h2>처음 방문자를 위한 안내</h2>
+    <p>강서 지역에는 다양한 스타일과 가격대의 셔츠룸이 존재합니다. 이 페이지는 처음 셔츠룸을 이용하려는 분들을 위해 복잡하게 느껴질 수 있는 선택 과정을 체계적으로 정리합니다. 독자는 각각의 셔츠룸이 제공하는 서비스와 시설을 비교하고, 자신의 상황에 맞는 최적의 옵션을 선택할 수 있습니다.</p>
+    <p>우리는 “동일한 말이 다르게 해석되는 경우”와 “확인 절차를 놓쳐 발생하는 문제”를 중심으로 설명합니다. 셔츠룸 이용 전 반드시 확인해야 할 항목을 체크리스트 형태로 제공해, 불필요한 혼란을 최소화합니다.</p>
+  </section>
 
-            <div class="stat">📊 2025년 강서 셔츠룸 모음 내 업소 평균 만족도: <span>4.2 / 5.0</span> (표본 1,200건)</div>
+  <section class="n-grid-7rri" data-v="d4e5f6" id="criteria" aria-label="선택 기준">
+    <div class="k-hero-0kqy">선택 기준</div>
+    <h2>셰츠룸을 고를 때 고려해야 할 핵심 포인트</h2>
+    <p>첫 번째 기준은 <strong>예약 시스템의 투명성</strong>입니다. 온라인 예약 페이지에 실시간 가용성이 표시되고, 취소·변경 정책이 명시돼 있는지 확인하십시오. 두 번째는 <strong>위생·청결 관리</strong>로, 실제 이용 후 사진이나 리뷰에 위생 상태가 잘 드러나는지 검증합니다.</p>
+    <p>세 번째는 <strong>가격 구조</strong>입니다. 기본 요금 외에 추가 비용(예: 시간 연장·특수 서비스)이 발생하는지 사전에 파악해야 합니다. 마지막으로 <strong>위치와 접근성</strong>을 고려해, 대중교통이나 차량 주차 편의성을 체크합니다.</p>
 
-            <h2>1. 강서 셔츠룸 리스트의 진화: 소비자 선호도 변화</h2>
-            <p>2023년 대비 2025년 강서 셔츠룸 모음의 주요 변화는 '프라이빗 공간'과 '서비스 다양성'에 대한 수요 급증이다. 데이터에 따르면, 30평 이상의 독립 룸을 보유한 업소의 방문율이 34% 증가했으며, 기본 셔츠룸 서비스 외에 퍼스널 케어 옵션을 제공하는 업소의 재방문율이 2.1배 높았다. 강서구 셔츠룸 추천 리스트를 구성할 때 가장 중요한 지표는 <strong>위치 접근성(35%)</strong>, <strong>시설 청결도(28%)</strong>, <strong>서비스 응대 품질(22%)</strong> 순으로 나타났다.</p>
+    <div class="v-head-92v9">
+      <h3>조건별 적합성 표</h3>
+      <table>
+        <thead>
+          <tr><th>조건</th><th>추천 셔츠룸</th><th>비고</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>단체 이용</td><td>셀라 셔츠룸</td><td>대규모 방 확보</td></tr>
+          <tr><td>예산 제한</td><td>라이트 셔츠룸</td><td>시간당 15,000원 이하</td></tr>
+          <tr><td>프리미엄 환경</td><td>엘리트 셔츠룸</td><td>고급 인테리어·전용 라운지</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-            <h2>2. 데이터 기반 선정 기준:
+  <section class="n-grid-7rri" data-v="g7h8i9" id="tips" aria-label="이용 팁">
+    <div class="k-hero-0kqy">이용 팁</div>
+    <h2>이용 전 반드시 확인해야 할 핵심 항목</h2>
+    <p>1️⃣ <strong>“같은 말이 다르게 이해되는 표현”</strong> – 예를 들어 “무제한 이용”이라는 문구가 실제로는 일정 시간 제한을 의미할 수 있습니다. 계약서에 명시된 정의를 반드시 확인하십시오.</p>
+    <p>2️⃣ <strong>“확인을 빠뜨려 발생하는 결과”</strong> – 예약 확인 메일을 받지 못했을 때는 반드시 전화나 메신저로 재확인하고, 예약 번호를 보관하세요.</p>
+    <p>3️⃣ <strong>“기록으로 남겨야 하는 항목”</strong> – 이용 전·후 사진, 결제 영수증, 약관 동의 화면을 저장해 두면 문제가 발생했을 때 증거 자료로 활용할 수 있습니다.</p>
+
+    <ol class="q-body-qjkm">
+      <li><strong>예약 단계</strong> – 웹에서 날짜·시간 선택 → 이름·연락처 입력 → 확인 메일 수신.</li>
+      <li><strong>방문 전 체크</strong> – 시설 사진 확인 → 위생 관리 현황 물어보기 → 입장 전 물품 보관 함 확인.</li>
+      <li><strong>이용 후 정산</strong> – 사용 시간 확인 → 추가 비용 여부 확인 → 영수증 보관.</li>
+    </ol>
+  </section>
+
+  <section class="n-grid-7rri" data-v="j0k1l2" id="faq" aria-label="FAQ">
+    <div class="k-hero-0kqy">FAQ</div>
+    <h2>자주 묻는 질문</h2>
+    <article data-v="m3n4o5">
+      <h3>강서에 있는 셔츠룸을 예약하려면 어떤 절차가 필요한가요?</h3>
+      <p>대부분의 셔츠룸은 온라인 예약 시스템을 운영합니다. 웹사이트에 접속해 원하는 날짜와 시간을 선택하고, 이름·연락처를 입력하면 바로 예약이 완료됩니다.</p>
+    </article>
+    <article data-v="p6q7r8">
+      <h3>초보자가 처음 방문할 때 꼭 확인해야 할 항목은 무엇인가요?</h3>
+      <p>이용 전 반드시 시설 이용 규칙·위생·환불 정책을 확인하고, 필요한 경우 개인 물품 보관 함을 미리 확인해 두는 것이 좋습니다.</p>
+    </article>
+    <article data-v="s9t0u1">
+      <h3>단체 예약 시 추가 비용이 발생할 수 있나요?</h3>
+      <p>네, 인원 수에 따라 최소 이용 시간·인원당 추가 요금이 적용될 수 있습니다. 사전에 셔츠룸 측과 상세 조건을 협의하세요.</p>
+    </article>
+    <article data-v="v2w3x4">
+      <h3>예약 취소는 어떻게 처리하나요?</h3>
+      <p>대부분의 경우 24시간 전까지는 무료 취소가 가능하며, 그 이후에는 전액 혹은 일부 금액이 차감되는 정책을 운영합니다.</p>
+    </article>
+  </section>
+</main>
+
+<footer class="q-img-jivx">
+  <div class="k-hero-0kqy">작성자</div>
+  <p>한빛 로컬 가이드 – 강서 지역 정보를 5년간 정리해온 로컬 저널리스트입니다. 독자에게 정확하고 실용적인 현장 정보를 제공하는 것이 목표입니다.</p>
+  <p>&copy; 2026 강서 셔츠룸 모음. All rights reserved.</p>
+</footer>
 </body>
 </html>
